@@ -430,6 +430,37 @@ h2 {
   font-size: 1rem;
 }
 
+/* ========== UNPAID BANNER ========== */
+.unpaid-banner {
+  margin-top: 3rem;
+  background: rgba(255, 51, 68, 0.08);
+  border: 2px solid var(--danger);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  animation: pulse-border 2s ease-in-out infinite;
+}
+
+.unpaid-banner p:first-child {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 700;
+  color: var(--danger);
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 20px var(--danger-glow);
+}
+
+.unpaid-sub {
+  margin-top: 0.5rem;
+  color: var(--text-dim);
+  font-size: 1rem;
+}
+
+@keyframes pulse-border {
+  0%, 100% { border-color: var(--danger); box-shadow: 0 0 10px var(--danger-glow); }
+  50% { border-color: #ff6677; box-shadow: 0 0 30px var(--danger-glow); }
+}
+
 /* ========== PLEDGE ========== */
 blockquote {
   background: var(--card-bg);
